@@ -569,11 +569,66 @@ table {
  */
 
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 100;
-  src: local('Roboto Thin'), local('Roboto-Thin'), url(http://fonts.gstatic.com/s/roboto/v14/2tsd397wLxj96qwHyNIkxPesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-family: 'Gotham Rounded';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Gotham Rounded Medium'), url(fonts/gotham-rounded-medium.otf);
+}
+
+@font-face {
+    font-family: 'Gotham Rounded';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Gotham Rounded Medium'), url(fonts/gotham-rounded-medium.ttf);
+}
+
+@font-face {
+    font-family: 'Arapey';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Arapey Italic'), local('Arapey-Italic'), url(http://fonts.gstatic.com/s/arapey/v5/2fD9gIinOROmREwVfSHWKvesZW2xOQ-xsNqO47m55DA.woff2) format('woff2');
+unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+h1, h2, h4, h5, h6 {
+    font-family: 'Gotham Rounded';
+    font-weight: 100;
+}
+
+h3 {
+    font-family: 'Arapey';
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: .02em;
+}
+
+p {
+    font-family: 'Gotham Rounded';
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+nav a {
+    font-family: "Gotham Rounded", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 100;
+    color: #567;
+    font-size: 14px;
+    padding: 5px 20px;
+    display: inline-block;
+    line-height: 20px;
+    -webkit-transition: color .2s;
+    -moz-transition: color .2s;
+    transition: color .2s;
+}
+
+nav a:hover {
+    color: #3E89D5;
 }
 
 /**
@@ -589,9 +644,257 @@ table {
  * 4.0 Header
  */
 
+header {
+    width: 100%;
+    height: 186px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.4);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+}
+
+header.up {
+    -webkit-transform: translateY(-130px);
+    -moz-transform: translateY(-130px);
+    -ms-transform: translateY(-130px);
+    transform: translateY(-130px);
+}
+
+header a#logo {
+    cursor: pointer; 
+}
+
+header a#logo div {
+    width: 458px;
+    height: 100px;
+    margin: 20px auto 10px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header nav {
+    margin: 15px auto;
+    text-align: center;
+}
+
+#ship {
+    display: block;
+    width: 50px;
+    height: 25px;
+    border-radius: 0 0 50px 50px;
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.3);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#ship div {
+    width: 30px;
+    height: 30px;
+    margin: -15px auto;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 /**
  * 5.0 Content
  */
+
+/* Home Section */
+    #home {
+        text-align: center;
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        color: #fff;
+    }
+    #home-wrapper {
+        width: 100%;
+        padding: 5px;
+        position: absolute;
+        top: 50%;
+        margin-top: -37px;
+        -webkit-tranform: translateY(-50%);
+        -moz-tranform: translateY(-50%);
+        -ms-tranform: translateY(-50%);
+        tranform: translateY(-50%);
+    }
+    #home h1 {
+        margin: 0;
+        font-size: 50px;
+        line-height: 60px;
+        text-transform: uppercase;
+    }
+    #home h2 {
+        margin: 0;
+        font-size: 50px;
+        line-height: 50px;
+        text-transform: uppercase;
+        font-weight: 400;   
+    }
+    #home h3 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 50px;
+        font-weight: 900;
+    }
+/* End Home Section */
+
+/* Global Sections */
+    #what-we-do,
+    #bizhacks,
+    #rush,
+    #brothers,
+    #connect {
+        padding: 40px 5px 120px;
+    }
+    #what-we-do h2,
+    #bizhacks h2,
+    #rush h2,
+    #brothers h2,
+    #connect h2 {
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 50px;
+        font-size: 35px;
+        color: #333;
+        margin-top: 2em;
+    }
+    #bizhacks h2,
+    #rush h2,
+    #brothers h2,
+    #connect h2 {
+        margin-bottom: .15em;
+    }
+    #what-we-do h3,
+    #bizhacks h3,
+    #rush h3,
+    #brothers h3,
+    #connect h3 {
+        text-align: center;
+        color: #7a8fa3;
+        font-size: 25px;
+        width: 100%;
+        max-width: 750px;
+        margin: 0 auto;
+    }
+    #what-we-do h2:before,
+    #what-we-do h2:after,
+    #bizhacks h2:before,
+    #bizhacks h2:after,
+    #rush h2:before,
+    #rush h2:after,
+    #brothers h2:before,
+    #brothers h2:after,
+    #connect h2:before,
+    #connect h2:after {
+        content: '';
+        display: inline-block;
+        width: 80px;
+        height: 2px;
+        background-color: #333;
+        vertical-align: middle;
+        margin: 0 10px;
+    }
+/* End Global Sections */
+
+/* What we do Section */
+    #what-we-do {
+        background-color: #e7e7e7;
+    }
+/* End What we do Section */
+
+/* Rush */
+    #rush {
+        background-color: #eee;   
+        text-align: center;
+    }
+    #rush img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        margin: 40px auto;
+        display: block;
+    }
+    #rush .sponsor img {
+        width: auto;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 5px;
+    }
+/* End Rush */
+
+/* Brothers */
+    #brothers {
+        background-color: #fff;
+        padding-bottom: 20px;
+    }
+    .board {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .board h4 {
+        font-size: 24px;
+        color: #678;
+        margin: 0;
+    }
+    .board h5 {
+        font-size: 14px;
+        color: #5e9516;
+        font-weight: 900;
+        margin: .5em;
+    }
+    .bro-pic {
+        width: 220px;
+        height: 220px;
+        margin: 0 auto 20px;
+        border-radius: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #brothers-more {
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+        font-family: "Gotham Rounded";
+    }
+    #brothers-more a {
+        font-size: 30px;
+        color: #fff;
+        font-weight: 100;
+        line-height: 50px;
+        padding: 20px 50px;
+        border: 3px solid #fff;
+        position: relative;
+        top: 140px;
+        background-color: rgba(55,55,55,.5);
+        cursor: pointer;
+        -webkit=transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    #brothers-more a:hover {
+        color: #333;
+        background-color: #fff;
+    }
+/* End Brothers */
 
 /**
  * 6.0 Footer
