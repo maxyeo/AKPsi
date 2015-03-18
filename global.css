@@ -579,7 +579,7 @@ table {
     font-family: 'Gotham Rounded';
     font-style: normal;
     font-weight: 100;
-    src: local('Gotham Rounded Medium'), url(fonts/gotham-rounded-medium.ttf);
+    src: local('Gotham Rounded Light'), url(fonts/gotham-rounded-light.ttf);
 }
 
 @font-face {
@@ -896,6 +896,51 @@ header nav {
     }
 /* End Brothers */
 
+/* Connect */
+    #connect {
+        background-color: #eee;
+        text-align: center;
+    }
+    #connect a {
+        cursor: pointer;
+    }
+    #connect img {
+        margin: 30px 20px 0;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    #connect img:hover {
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        transform: translateY(-10px);
+    }
+/* End Connect */
+
 /**
  * 6.0 Footer
  */
+
+ footer {
+    padding: 80px 5px 10px;
+    background-color: #333;
+    color: #ddd;
+ }
+ footer h6 {
+    text-align: center;
+    text-transform: uppercase;
+ }
+ footer h6 a,
+ footer h6 a:link,
+ footer h6 a:active,
+ footer h6 a:visited {
+    color: #ddd;
+    text-decoration: none;
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    transition: all .3s;
+ }
+ footer h6 a:hover {
+    color: #fff;
+ }
