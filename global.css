@@ -631,6 +631,39 @@ nav a:hover {
     color: #3E89D5;
 }
 
+label {
+    font-family: 'Gotham Rounded';
+    font-weight: 400;
+    color: #555;
+    font-size: 20px;
+    margin: 10px 0;
+    display: block;
+}
+
+input,
+textarea {
+    font-family: 'Gotham Rounded';
+    font-size: 20px;
+    font-weight: 400;
+    color: #000;
+}
+
+::-webkit-input-placeholder {
+   color: #555;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #555;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #555; 
+}
+
+:-ms-input-placeholder {  
+   color: #555; 
+}
+
 /**
  * 3.1 Font Awesome
  */
@@ -759,14 +792,16 @@ header nav {
     #bizhacks,
     #rush,
     #brothers,
-    #connect {
+    #connect,
+    #bizhacks-form {
         padding: 40px 5px 120px;
     }
     #what-we-do h2,
     #bizhacks h2,
     #rush h2,
     #brothers h2,
-    #connect h2 {
+    #connect h2,
+    #bizhacks-form h2 {
         text-transform: uppercase;
         text-align: center;
         line-height: 50px;
@@ -777,14 +812,16 @@ header nav {
     #bizhacks h2,
     #rush h2,
     #brothers h2,
-    #connect h2 {
+    #connect h2,
+    #bizhacks-form h2 {
         margin-bottom: .15em;
     }
     #what-we-do h3,
     #bizhacks h3,
     #rush h3,
     #brothers h3,
-    #connect h3 {
+    #connect h3,
+    #bizhacks-form h3 {
         text-align: center;
         color: #7a8fa3;
         font-size: 25px;
@@ -1154,6 +1191,101 @@ header nav {
         transform: translateY(-10px);
     }
 /* End Connect */
+
+/* Bizhacks Page */
+    #bizhacks-home {
+        position: relative;
+    }
+    #bizhacks-home-wrapper {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        margin-top: 90px;
+        text-align: center;
+        color: #fff;
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+    #bizhacks-home #filter {
+        background-color: rgba(255, 255, 255, 0.13);
+    }
+    #banner {
+        height: 100px;
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #bizhacks-form #banner {
+        margin-top: 1em;
+    }
+    #bizhacks-form {
+        text-align: center;
+    }
+    .ss-form-entry input,
+    .ss-form-entry textarea {
+        width: 100%;
+        max-width: 400px;
+        margin: 10px auto;
+        border-width: 0px;
+        border-bottom: 2px solid rgb(0, 102, 255);
+        padding: 3px 10px;
+        -webkit-transition: border .3s;
+        -moz-transition: border .3s;
+        transition: border .3s;
+    }
+    .ss-form-entry textarea {
+        margin-top: 20px;
+    }
+    .ss-form-entry input:focus,
+    .ss-form-entry textarea:focus {
+        outline: none;
+        border-bottom: 4px solid rgb(0, 102, 255);
+    }
+    .ss-form-entry ul {
+        padding: 0;
+        width: 100%;
+        max-width: 400px;
+        text-align: left;
+        margin: 0 auto;
+    }
+    .ss-form-entry li {
+        list-style-type: none;
+    }
+    .ss-form-entry li input {
+        margin: 0 7px;
+        width: auto;
+    }
+    .ss-choice-item label {
+        font-size: 16px;
+        margin: 0;
+        display: inline-block;
+    }
+    .ss-choice-item input {
+        font-size: 16px;
+        padding: 0;
+    }
+    #bizhacks-form input[type='submit'] {
+        margin: 40px;
+        width: 100%;
+        padding: 5px 20px;
+        border: 2px solid rgb(0, 102, 255);
+        background-color: transparent;
+        color: rgb(0, 102, 255);
+        max-width: 400px;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+    #bizhacks-form input[type='submit']:hover {
+        background-color: rgb(0, 102, 255);
+        color: #fff;
+    }
+/* End Bizhacks Page */
 
 /**
  * 6.0 Footer
