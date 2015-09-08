@@ -3,7 +3,7 @@
 Template Name: Footer Template
 */
 ?>
-    <footer style="background: linear-gradient(rgba(197, 208, 210, 0.7), rgba(17, 89, 115, 1)), url(http://proscia.co/wp-content/themes/proscia15/img/city.png);">
+    <footer style="background: linear-gradient(rgba(197, 208, 210, 0.7), rgba(17, 89, 115, 1)), url();">
         <!-- <nav>
             <?php 
             $args = array(
