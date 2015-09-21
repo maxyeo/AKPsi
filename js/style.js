@@ -42,6 +42,23 @@ $(document).ready(function() {
       }, 300);
     });
 
+    $('.gallery-img').click(function() {
+      $('#light').addClass('up');
+      var image = $(this).attr("style");
+      $('#light img').attr('src', image.substring(22, 41));
+    });
+
+    $('#light img').click(function(e){
+      e.stopPropagation();
+    });
+
+    $('#light').click(function(){
+      $('#light').removeClass('up');
+      setTimeout(function () {
+        $('#light img').attr('src', '');
+      }, 300);
+    });
+
 });
 
 $(window).resize(function() {

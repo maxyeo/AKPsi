@@ -742,6 +742,12 @@ header nav {
     background-repeat: no-repeat;
 }
 
+@media (max-width: 600px){
+    header nav {
+        display: none;
+    }
+}
+
 /**
  * 5.0 Content
  */
@@ -887,6 +893,25 @@ header nav {
         background-color: #eee;   
         text-align: center;
     }
+    #rush #video-wrap {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    #rush #video {
+        margin-top: 2em;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.25%;
+        position: relative;
+    }
+    #rush #video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
     #rush img {
         width: 100%;
         max-width: 800px;
@@ -900,7 +925,60 @@ header nav {
         vertical-align: middle;
         margin: 0 5px;
     }
+    #rush .gallery {
+        margin: 2em auto;
+        width: 100%;
+        max-width: 800px;
+    }
+    #rush .gallery-img-wrapper {
+        padding: 2px;
+    }
+    #rush .gallery-img {
+        padding-bottom: 100%;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        -webkit-transition: box-shadow .3s;
+        -moz-transition: box-shadow .3s;
+        transition: box-shadow .3s;
+        cursor: pointer;
+    }
+    #rush .gallery-img:hover {
+        box-shadow: 0px 0px 2px 1px #5E9516;
+    }
 /* End Rush */
+
+/*  Light */
+    #light {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.5);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 2;
+    }
+    #light.up {
+        visibility: visible;
+        opacity: 1;
+    }
+    #light section {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+    #light section img {
+        width: 100%;
+        height: auto;
+    }
+/*  End Light */
 
 /* Brothers */
     #brothers {
